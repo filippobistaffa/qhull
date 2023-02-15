@@ -441,7 +441,8 @@ set_target_properties(${qhull_STATIC} PROPERTIES
 add_library(${qhull_STATICR} STATIC ${libqhullr_SOURCES})
 set_target_properties(${qhull_STATICR} PROPERTIES
     VERSION ${qhull_VERSION}
-    OUTPUT_NAME "${qhull_STATICR}$<$<CONFIG:Debug>:d>")
+    OUTPUT_NAME "${qhull_STATICR}$<$<CONFIG:Debug>:d>"
+    POSITION_INDEPENDENT_CODE "TRUE")
 
 if(UNIX)
     target_link_libraries(${qhull_STATIC} m)

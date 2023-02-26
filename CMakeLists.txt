@@ -445,13 +445,9 @@ set_target_properties(${qhull_STATICR} PROPERTIES
     POSITION_INDEPENDENT_CODE "TRUE")
 
 set(OPTIMIZATION_COMPILE_FLAGS
-    -Ofast
+    -O3
     -march=native
     -funroll-loops
-    -funsafe-loop-optimizations
-    -falign-functions=16
-    -falign-loops=16
-    -fopenmp
 )
 
 target_compile_options(${qhull_STATICR} PRIVATE ${OPTIMIZATION_COMPILE_FLAGS})

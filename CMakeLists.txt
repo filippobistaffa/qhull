@@ -444,6 +444,18 @@ set_target_properties(${qhull_STATICR} PROPERTIES
     OUTPUT_NAME "${qhull_STATICR}$<$<CONFIG:Debug>:d>"
     POSITION_INDEPENDENT_CODE "TRUE")
 
+set(OPTIMIZATION_COMPILE_FLAGS
+    -Ofast
+    -march=native
+    -funroll-loops
+    -funsafe-loop-optimizations
+    -falign-functions=16
+    -falign-loops=16
+    -fopenmp
+)
+
+target_compile_options(${qhull_STATICR} PRIVATE ${OPTIMIZATION_COMPILE_FLAGS})
+
 if(UNIX)
     target_link_libraries(${qhull_STATIC} m)
     target_link_libraries(${qhull_STATICR} m)

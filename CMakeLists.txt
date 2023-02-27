@@ -446,7 +446,6 @@ set_target_properties(${qhull_STATICR} PROPERTIES
 
 set(OPTIMIZATION_COMPILE_FLAGS
     -O3
-    -march=native
     -funroll-loops
 )
 

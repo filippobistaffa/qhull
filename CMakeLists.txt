@@ -445,8 +445,9 @@ set_target_properties(${qhull_STATICR} PROPERTIES
     POSITION_INDEPENDENT_CODE "TRUE")
 
 set(OPTIMIZATION_COMPILE_FLAGS
-    -O3
-    -funroll-loops
+    -O2 # safer
+    #-O3
+    #-funroll-loops
 )
 
 target_compile_options(${qhull_STATICR} PRIVATE ${OPTIMIZATION_COMPILE_FLAGS})

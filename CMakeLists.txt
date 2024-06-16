@@ -68,7 +68,7 @@
 # $Id: //main/2019/qhull/CMakeLists.txt#22 $$Change: 3396 $
 # $DateTime: 2023/01/02 16:59:48 $$Author: bbarber $
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.9)
 project(qhull)
 
 # Define qhull_VERSION in README.txt, Announce.txt, qh-get.htm, CMakeLists.txt
